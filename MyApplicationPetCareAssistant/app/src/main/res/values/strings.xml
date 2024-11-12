@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My ApplicationPetCareAssistant</string>
+    <string name="app_title">pet care assistant</string>
+    <string name="add_pet">add pet</string>
+</resources>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="?attr/colorSurface">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- 宠物头像 -->
+        <ImageView
+            android:id="@+id/petImageView"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/ic_pet_placeholder"
+            android:scaleType="centerCrop"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:clipToOutline="true"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+
+        <!-- 宠物名称 -->
+        <TextView
+            android:id="@+id/petNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="宠物名字"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_toEndOf="@id/petImageView"
+            android:layout_marginStart="12dp"
+            android:layout_alignTop="@id/petImageView"
+            android:textColor="@color/black" /> <!-- 确保在 colors.xml 中定义了此颜色 -->
+
+        <!-- 宠物品种 -->
+        <TextView
+            android:id="@+id/petSpeciesText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="品种"
+            android:layout_toEndOf="@id/petImageView"
+            android:layout_below="@id/petNameText"
+            android:layout_marginStart="12dp"
+            android:textSize="14sp"
+            android:textColor="@color/colorOnSurfaceVariant" /> <!-- 确保在 colors.xml 中定义了此颜色 -->
+
+        <!-- 上次喂食时间 -->
+        <TextView
+            android:id="@+id/lastFedText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上次喂食: 2小时前"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@id/petNameText"
+            android:textSize="14sp"
+            android:textColor="@color/colorPrimaryVariant" /> <!-- 确保在 colors.xml 中定义了此颜色 -->
+
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>
